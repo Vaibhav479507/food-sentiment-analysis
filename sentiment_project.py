@@ -75,6 +75,6 @@ if file:
         pred=model.predict(carpus)
         prob=np.max(model.predict_proba(corpus),axis=1)
         df['Sentiment']=pred
-        df['Confidance']=prob
-        df['Sentiemnt']=df['Sentiemnt'].map({0:'Neg 👎',1:'Pos 👍'})
+        df['Confidence']=prob
+        df['Sentiment']=df['Sentiment'].map({0:'Neg 👎',1:'Pos 👍'})
         placeholder.dataframe(df)
